@@ -1,4 +1,4 @@
-import { readFile, writeFile } from 'fs'
+const { readFile, writeFile } = require('fs');
 
 readFile('source.txt', 'utf-8', (err, data) => {
     if (err) throw err
