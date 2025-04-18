@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        title Список пользователей
+    body
+        h1 Список пользователей
+        table
+            thead
+                tr
+                    th Имя
+                    th Возраст
+                    th Почта
+            tbody
+                each user in users
+                    tr
+                        td= user.name 
+                        td= user.age 
+                        td= user.email
+
