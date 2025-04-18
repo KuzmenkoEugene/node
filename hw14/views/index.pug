@@ -1,0 +1,16 @@
+doctype html
+html
+    head
+        title Продукты
+    body
+        h1 Список продуктов
+        table
+            thead
+                tr
+                    th Название
+                    th Есть ли в наличии
+            tbody
+                each product in products
+                    tr(style=product.availability === "есть" ? "color: green" : "color: red")
+                        td= product.name 
+                        td= product.availability 
