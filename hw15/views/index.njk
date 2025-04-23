@@ -1,0 +1,37 @@
+<!-- layout.njk -->
+<html>
+    <head>
+        <title>
+            {% block title %}
+                Список юзеров через Nunjucks
+            {% endblock %}
+        </title>
+    </head>
+  <body>
+    {% block content %}
+        <h1>Список юзеров:</h1>
+    {% endblock %}
+    {% if users %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Возраст</th>
+                    <th>Почта</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ user.name  }}</td>
+                        <td>{{ user.age  }}</td>
+                        <td>{{ user.email  }}</td>
+                    <tr/>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Нет юзеров</p>
+    {% endif %}
+  </body>
+</html>
